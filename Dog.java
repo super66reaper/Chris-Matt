@@ -2,38 +2,55 @@
 public class Dog
 {
     private String name;
+
     private boolean fed;
     private boolean walked;
     private boolean petted;
     private boolean happy;
 
-    public dog(String name){
+    public Dog(String name){
         this.name = name;
     }
-    public bool getFed(){
+
+    //Getters
+    public boolean getFed()
+    {
         return fed;
     }
-    public bool getWalked(){
+
+    public boolean getWalked()
+    {
         return walked;    
     }
-    public bool getPetted(){
+
+    public boolean getPetted()
+    {
         return petted;
     }
-    public void feed(boolean condition){
-        this.fed = condition
 
-    }
-    public void walk(boolean condition){
-        this.walked = condition;
-    }
-    public void pet(boolean condition){
-        this.petted = condition;
-    }
-
-    public boolean isHappy(){
+    public boolean isHappy()
+    {
         return happy;
     }
 
+    //Interactions
+    public String feed(boolean condition)
+    {
+        this.fed = condition
+        return getMood();
+    }
+    public String walk(boolean condition)
+    {
+        this.walked = condition;
+        return getMood();
+    }
+    public String pet(boolean condition)
+    {
+        this.petted = condition;
+        return getMood();
+    }
+
+    //Mood
     public String getMood()
     {
         if(fed && walked && petted){
