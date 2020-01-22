@@ -2,29 +2,38 @@
 public class Dog
 {
     private String name;
+
     private boolean fed;
     private boolean walked;
     private boolean petted;
     private boolean happy;
 
-    public dog(String name){
+    public Dog(String name){
         this.name = name;
     }
 
-    public bool getFed()
+    //Getters
+    public boolean getFed()
     {
         return fed;
     }
-    public bool getWalked()
+
+    public boolean getWalked()
     {
         return walked;    
     }
-    public bool getPetted()
+
+    public boolean getPetted()
     {
         return petted;
     }
 
-    
+    public boolean isHappy()
+    {
+        return happy;
+    }
+
+    //Interactions
     public void feed(boolean condition)
     {
         this.fed = condition
@@ -41,11 +50,7 @@ public class Dog
 
     }
 
-    public boolean getHappy()
-    {
-        return happy;
-    }
-
+    //Mood
     public String getMood()
     {
         if(fed && walked && petted){

@@ -1,4 +1,5 @@
-public class Cat {
+public class Cat 
+{
     private String name;
 
     private boolean fed;
@@ -10,6 +11,7 @@ public class Cat {
         this.name = name;
     }
 
+    //Getters
     public boolean getFed() {
         return fed;
     }
@@ -22,10 +24,12 @@ public class Cat {
         return petted;
     }
 
-    public boolean getHappy() {
+
+    public boolean isHappy() {
         return happy;
     }
 
+    //Interactions
     public String feed(boolean condition) {
         fed = condition;
         return CheckMood;
@@ -45,6 +49,8 @@ public class Cat {
         return happy;
     }
 
+
+    //Mood
     public String getMood() {
         if(fed && !walked && !petted) {
             happy = true;

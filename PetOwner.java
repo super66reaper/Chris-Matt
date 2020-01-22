@@ -9,32 +9,35 @@ public PetOwner {
         this.cat = cat;
     }
 
+    //Dog Interactions
     public void petDog() {
-        System.out.println("Dog is: " + dog.pet(true));
+        System.out.println("Dog says: " + dog.pet(true));
     }
 
     public void walkDog() {
-        System.out.println("Dog is: " + dog.walk(true));
+        System.out.println("Dog says: " + dog.walk(true));
     }
 
     public void feedDog() {
-        System.out.println("Dog is: " + dog.feed(true));
+        System.out.println("Dog says: " + dog.feed(true));
     }
 
+    //Cat Interactions
     public void petCat() {
-        System.out.println("Cat is: " + cat.pet(true));
+        System.out.println("Cat says: " + cat.pet(true));
     }
     
     public void walkCat() {
-        System.out.println("Cat is: " + cat.walk(true));
+        System.out.println("Cat says: " + cat.walk(true));
     }
 
     public void feedCat() {
-        System.out.println("Cat is: " + cat.feed(true));
+        System.out.println("Cat says: " + cat.feed(true));
     }
 
+    //Owner Mood
     public boolean getHappy() {
-        if(alfred.getMood().equals("Meow") && joe.getMood().equals("WOOF")) {
+        if(dog.isHappy() && cat.isHappy()) {
             return true;
         }else {
             return false;
