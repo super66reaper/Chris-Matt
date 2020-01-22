@@ -10,39 +10,27 @@ public class Dog
     public dog(String name){
         this.name = name;
     }
-
-    public bool getFed()
-    {
+    public bool getFed(){
         return fed;
     }
-    public bool getWalked()
-    {
+    public bool getWalked(){
         return walked;    
     }
-    public bool getPetted()
-    {
+    public bool getPetted(){
         return petted;
     }
-
-    
-    public void feed(boolean condition)
-    {
+    public void feed(boolean condition){
         this.fed = condition
 
     }
-    public void walk(boolean condition)
-    {
+    public void walk(boolean condition){
         this.walked = condition;
-
     }
-    public void pet(boolean condition)
-    {
+    public void pet(boolean condition){
         this.petted = condition;
-
     }
 
-    public boolean getHappy()
-    {
+    public boolean isHappy(){
         return happy;
     }
 
