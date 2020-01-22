@@ -34,8 +34,7 @@ public PetOwner {
     }
 
     public boolean getHappy() {
-        if(alfred.getMood().equals("Meow") && 
-        joe.getMood().equals("WOOF")) {
+        if(alfred.getMood().equals("Meow") && joe.getMood().equals("WOOF")) {
             return true;
         }else {
             return false;
