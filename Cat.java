@@ -32,17 +32,17 @@ public class Cat
     //Interactions
     public String feed(boolean condition) {
         fed = condition;
-        return CheckMood;
+        return getMood();
     }
     
     public String walk(boolean condition) {
         walked = condition;
-        return CheckMood;
+        return getMood();
     }
 
     public String pet(boolean condition) {
         petted = condition;
-        return CheckMood;
+        return getMood();
     }
 
     public boolean GetHappy() {

@@ -34,20 +34,20 @@ public class Dog
     }
 
     //Interactions
-    public void feed(boolean condition)
+    public String feed(boolean condition)
     {
         this.fed = condition
-
+        return getMood();
     }
-    public void walk(boolean condition)
+    public String walk(boolean condition)
     {
         this.walked = condition;
-
+        return getMood();
     }
-    public void pet(boolean condition)
+    public String pet(boolean condition)
     {
         this.petted = condition;
-
+        return getMood();
     }
 
     //Mood
