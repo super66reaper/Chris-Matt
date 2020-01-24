@@ -41,4 +41,10 @@ public class Pet {
     {
         petted = true;
     }
+    public boolean dogIsHappy() {
+        return isFed() && isWalked() && isPetted();
+    }
+    public boolean catIsHappy() {
+        return isFed() && !(isWalked() || isPetted());
+    }
 }

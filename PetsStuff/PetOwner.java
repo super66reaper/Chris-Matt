@@ -1,46 +1,45 @@
-public PetOwner {
-    private Dog dog;
-    private Cat cat;
+public class PetOwner {
+    private Pet[] pets;
 
     private boolean happy;
 
-    public PetOwner(Dog dog, Cat cat) {
-        this.dog = dog;
-        this.cat = cat;
+    public PetOwner(Pet[] pets) {
+        this.pets = pets;
     }
 
     //Dog Interactions
-    public void petDog() {
-        System.out.println("Dog says: " + dog.pet(true));
+    public void pet(int i) {
+        pets[i].pet();
     }
 
-    public void walkDog() {
-        System.out.println("Dog says: " + dog.walk(true));
+    public void walk(int i) {
+        pets[i].walk();
     }
 
-    public void feedDog() {
-        System.out.println("Dog says: " + dog.feed(true));
+    public void feed(int i) {
+        pets[i].feed();
     }
 
-    //Cat Interactions
-    public void petCat() {
-        System.out.println("Cat says: " + cat.pet(true));
-    }
-    
-    public void walkCat() {
-        System.out.println("Cat says: " + cat.walk(true));
-    }
-
-    public void feedCat() {
-        System.out.println("Cat says: " + cat.feed(true));
-    }
 
     //Owner Mood
     public boolean getHappy() {
-        if(dog.isHappy() && cat.isHappy()) {
-            return true;
-        }else {
-            return false;
+        for(Pet p:pets) 
+        {
+            if(p instanceof Dog){
+                if(!p.dogIsHappy()) {
+                    return false;
+                    }
+
+            }
+            if(p instanceof Cat)
+            {
+                if(!p.catIsHappy()) {
+                    return false;
+                    }
+            }
+                
+                
         }
+        return true;
     }
 }
