@@ -26,6 +26,20 @@ public class Pet {
         return petted;
     }
 
+    //Setters
+    public void SetFed(boolean condition) {
+        fed = condition;
+    }
+
+    public void SetWalked(boolean condition) {
+        walked = condition;
+    }
+
+    public void SetPetted(boolean condition) {
+        petted = condition;
+    }
+    
+
     //Interactions
     public void feed()
     {
@@ -37,10 +51,11 @@ public class Pet {
         walked = true;
     }
 
-        public void pet()
-        {
-            petted = true;
-        }
+    public void pet()
+    {
+        petted = true;
+    }
+
     public boolean isHappy()
     {
 

@@ -12,7 +12,6 @@ public class Cat extends Pet
         else{
             return false;   
         }
-        
     }
 
 
