@@ -4,14 +4,22 @@ public class Cat extends Pet
         super(name);
     }
 
-    public boolean catIsHappy() {
-        return isFed() && !(isWalked() || isPetted());
+    public boolean isHappy() {
+        if(isFed() && !(isWalked() || isPetted()))
+        {
+            return true;
+        }
+        else{
+            return false;   
+        }
+        
     }
+
 
     //Mood
     public String talk()
     {
-        if(catIsHappy()) {
+        if(isHappy()) {
             return "meow";
         }else {
             return "hiss";

@@ -1,9 +1,9 @@
 public class Pet {
     private String name;
 
-    private boolean fed;
-    private boolean walked;
-    private boolean petted;
+    private boolean fed = false;
+    private boolean walked = false;
+    private boolean petted = false;
     
     public Pet(String name) {
         this.name = name;
@@ -41,10 +41,18 @@ public class Pet {
     {
         petted = true;
     }
-    public boolean dogIsHappy() {
-        return isFed() && isWalked() && isPetted();
+    public boolean isHappy()
+    {
+
+        if(isFed() && isWalked() && isPetted())
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+       
     }
-    public boolean catIsHappy() {
-        return isFed() && !(isWalked() || isPetted());
-    }
+    
+    
 }

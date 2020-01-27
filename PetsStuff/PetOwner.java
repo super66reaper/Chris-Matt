@@ -1,7 +1,6 @@
 public class PetOwner {
     private Pet[] pets;
 
-    private boolean happy;
 
     public PetOwner(Pet[] pets) {
         this.pets = pets;
@@ -20,24 +19,17 @@ public class PetOwner {
         pets[i].feed();
     }
 
-
+    
     //Owner Mood
     public boolean getHappy() {
         for(Pet p:pets) 
         {
-            if(p instanceof Dog){
-                if(!p.dogIsHappy()) {
-                    return false;
-                    }
-
-            }
-            if(p instanceof Cat)
+            if(!(p.isHappy()))
             {
-                if(!p.catIsHappy()) {
-                    return false;
-                    }
+                return false;
             }
-                
+            
+            
                 
         }
         return true;
