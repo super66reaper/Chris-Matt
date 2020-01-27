@@ -37,10 +37,10 @@ public class Pet {
         walked = true;
     }
 
-    public void pet()
-    {
-        petted = true;
-    }
+        public void pet()
+        {
+            petted = true;
+        }
     public boolean isHappy()
     {
 
